@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+$clr-background: #f5f5f5;
+$clr-grey: #E2E2E2;
+$clr-main: #212121;
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  font-family: "Poppins", sans-serif;
+  background-color: #F5F5F5;
+  color: $clr-main;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+}
+
+.btn {
+  border: 1px solid transparent;
+  background-color: #fff;
+  padding: .2rem 1rem;
+  border-radius: .2rem;
+  text-decoration: none;
+  transition: all ease .3s;
+}
