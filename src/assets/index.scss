@@ -21,16 +21,13 @@ body {
   color: $clr-main;
 }
 
-section {
-    height: 100vh;
-    width: 100%;
-}
+
 
 .btn {
   border: 1px solid transparent;
   background-color: #fff;
   padding: .2rem 1rem;
-  border-radius: .2rem;
+  border-radius: .25rem;
   text-decoration: none;
   transition: all ease .3s;
 }

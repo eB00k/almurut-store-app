@@ -6,7 +6,7 @@ $clr-main: #212121;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 2rem;
+  padding: 1.2rem 2rem;
   font-size: 0.9rem;
 
   .navbar__icon {
@@ -70,6 +70,21 @@ $clr-main: #212121;
       border: 1px solid $clr-main;
       background-color: $clr-background;
       color: $clr-main;
+    }
+  }
+}
+
+@media (width < 800px) {
+  .navbar {
+    .navbar__icon {
+      .icon__text {
+        display: none;
+      }
+    }
+    nav {
+      .navbar__list {
+        display: none;
+      }
     }
   }
 }

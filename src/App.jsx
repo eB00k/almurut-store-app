@@ -1,11 +1,10 @@
 import Navbar from "./components/layouts/Navbar";
+import Home from "./pages/home/Home";
 
 function App() {
   return (
     <>
-      <section className="hero">
-        <Navbar/>
-      </section>
+      <Home />
     </>
   );
 }
