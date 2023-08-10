@@ -1,0 +1,75 @@
+$clr-background: #f5f5f5;
+$clr-grey: #999;
+$clr-main: #212121;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  font-size: 0.9rem;
+
+  .navbar__icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    img {
+      transition: all ease 0.6s;
+      &:hover {
+        filter: drop-shadow(0px 0px 10px #212121);
+      }
+    }
+
+    .icon__text {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+  }
+
+  nav .navbar__list {
+    font-weight: 400;
+    color: $clr-grey;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 4vw;
+
+    li {
+      position: relative;
+      list-style: none;
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background-color: $clr-main;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    }
+  }
+
+  .navbar__login {
+    background-color: $clr-main;
+    color: #f5f5f5;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid $clr-main;
+      background-color: $clr-background;
+      color: $clr-main;
+    }
+  }
+}
