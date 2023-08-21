@@ -11,13 +11,10 @@ export default function Home() {
         <div className="hero__text">
           <h1>Tech Unleashed: Your Imagination, Our Innovation</h1>
           <p>
-            Discover the Future with Smartphones, Laptops, AirPods, and
-            <span className="link">More</span>
+            Discover the Future with Smartphones, Laptops, AirPods, and <span className="link">More</span>
           </p>
         </div>
-        <div className="hero__banner">
-          <img src={macbook} alt="macbook" style={{}} />
-        </div>
+        <img src={macbook} alt="macbook" style={{}} />
       </div>
     </div>
   );

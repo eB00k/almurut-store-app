@@ -11,7 +11,7 @@ $clr-main: #212121;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 15vh 1rem;
+    margin: 15vh 2.2rem;
 
     .hero__text {
       max-width: 420px;
@@ -34,17 +34,11 @@ $clr-main: #212121;
       }
     }
 
-    .hero__banner {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      filter: drop-shadow(0px 0px 10px #999);
-
-      img {
-        width: 90%;
-        max-width: 900px;
-        min-width: 500px;
-      }
+    img {
+      width: 70%;
+      max-width: 600px;
+      min-width: 360px;
+      filter: drop-shadow(0px 0px 10px $clr-main);
     }
   }
 
@@ -61,12 +55,10 @@ $clr-main: #212121;
         margin-top: 2rem;
       }
 
-      .hero__banner {
-        img {
-          width: 70%;
-          min-width: 400px;
-        }
-      }
+      // img {
+      //   width: 70%;
+      //   min-width: 400px;
+      // }
     }
   }
 }

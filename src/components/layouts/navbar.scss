@@ -3,13 +3,33 @@ $clr-grey: #999;
 $clr-main: #212121;
 
 .navbar {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem 2rem;
   font-size: 0.9rem;
 
+  .toggle__menu {
+    position: absolute;
+    right: 1.2rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+
+    .bar {
+      height: 3px;
+      width: 100%;
+      background-color: $clr-main;
+      border-radius: 0.2rem;
+    }
+  }
+
   .navbar__icon {
+    flex: 1;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -27,36 +47,42 @@ $clr-main: #212121;
     }
   }
 
-  nav .navbar__list {
-    font-weight: 400;
-    color: $clr-grey;
-
+  nav {
+    flex: 2;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 4vw;
+    justify-content: space-between;
 
-    li {
-      position: relative;
-      list-style: none;
-      cursor: pointer;
+    .navbar__list {
+      font-weight: 400;
+      color: $clr-grey;
 
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 2px;
-        width: 100%;
-        background-color: $clr-main;
-        transform: scaleX(0);
-        transform-origin: bottom right;
-        transition: transform 0.25s ease-out;
-      }
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      gap: 4vw;
 
-      &:hover::after {
-        transform: scaleX(1);
-        transform-origin: bottom left;
+      li {
+        position: relative;
+        list-style: none;
+        cursor: pointer;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 2px;
+          width: 100%;
+          background-color: $clr-main;
+          transform: scaleX(0);
+          transform-origin: bottom right;
+          transition: transform 0.25s ease-out;
+        }
+
+        &:hover::after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
       }
     }
   }
@@ -74,16 +100,45 @@ $clr-main: #212121;
   }
 }
 
-@media (width < 800px) {
+@media (width < 768px) {
   .navbar {
-    .navbar__icon {
-      .icon__text {
-        display: none;
-      }
+    .toggle__menu {
+      display: flex;
     }
+
     nav {
-      .navbar__list {
-        display: none;
+      display: none;
+
+      &.menu {
+        display: flex;
+        gap: 1rem;
+        position: absolute;
+        top: 3.5rem;
+        right: 1rem;
+        z-index: 1;
+        width: 50%;
+        height: max-content;
+        background-color: $clr-main;
+        border-radius: 0.4rem 0 0.4rem 0.4rem;
+        padding: 1.5rem;
+
+        flex-direction: column;
+
+        .navbar__login {
+          text-align: center;
+        }
+
+        .navbar__list {
+          flex-direction: column;
+
+          li {
+            &:hover::after {
+              transform: scaleX(1);
+              transform-origin: bottom left;
+              background-color: $clr-background;
+            }
+          }
+        }
       }
     }
   }
