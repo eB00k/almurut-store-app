@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+@layer components {
+  .max-container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .btn {
+    @apply px-4 border py-[.15rem] rounded-[.25rem] border-primary bg-primary text-whitee w-max transition;
+  }
+
+  .navLink li {
+    position: relative;
+    list-style: none;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background-color: #212121;
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+}
+
+@layer utilities {
+  .padding {
+    @apply px-8 py-12 sm:px-16 sm:py-24;
+  }
+  .padding-x {
+    @apply px-8 sm:px-16;
+  }
+  .padding-y {
+    @apply py-12 sm:py-24;
+  }
+  .padding-l {
+    @apply pl-8 sm:pl-16;
+  }
+  .padding-r {
+    @apply pr-12 sm:pr-24;
+  }
+  .info-text {
+    @apply text-slate-gray text-lg leading-7;
+  }
+}
