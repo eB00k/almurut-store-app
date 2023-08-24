@@ -8,7 +8,7 @@ export default function Home() {
           Tech Unleashed: Your{" "}
           <span className="text-secondary">Imagination</span>, Our Innovation
         </h1>
-        <p className="info-text max-sm:text-base">
+        <p className="w-full info-text max-sm:text-base max-lg:text-center">
           Discover the Future with Smartphones, Laptops, AirPods, and{" "}
           <span className="underline">More</span>
         </p>

@@ -25,6 +25,17 @@ body {
     @apply px-4 border py-[.15rem] rounded-[.25rem] border-primary bg-primary text-whitee w-max transition;
   }
 
+  .mNavLink {
+    list-style: none;
+    cursor: pointer;
+
+    li {
+      &:hover {
+        scale: 1.1;
+      }
+    }
+  }
+
   .navLink li {
     position: relative;
     list-style: none;
