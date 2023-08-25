@@ -1,13 +1,9 @@
-import Navbar from "./components/layouts/Navbar";
-import Featured from "./pages/Featured";
-import Home from "./pages/Home";
+import Router from "./router/Router";
 
 function App() {
   return (
     <main className="relative">
-      <Navbar/>
-      <Home />
-      <Featured/>
+      <Router />
     </main>
   );
 }

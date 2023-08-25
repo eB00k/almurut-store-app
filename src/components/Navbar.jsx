@@ -1,7 +1,7 @@
 // import "./navbar.scss";
-import icon from "../../assets/pear.png";
-import menuIcon from "../../assets/menu-icon.svg";
-import closeMenuIcon from "../../assets/close-menu-icon.svg";
+import icon from "../assets/pear.png";
+import menuIcon from "../assets/menu-icon.svg";
+import closeMenuIcon from "../assets/close-menu-icon.svg";
 import { useRef } from "react";
 
 export default function Navbar() {
