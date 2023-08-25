@@ -22,7 +22,7 @@ body {
   }
 
   .btn {
-    @apply px-4 border py-[.15rem] rounded-[.25rem] border-primary bg-primary text-whitee w-max transition;
+    @apply px-4 border py-[.15rem] rounded-[.25rem] border-primary bg-primary text-whitee w-max transition text-center;
   }
 
   .mNavLink {
@@ -34,6 +34,10 @@ body {
         scale: 1.1;
       }
     }
+  }
+
+  .card {
+    @apply relative max-w-sm min-w-[280px] bg-white shadow-xl rounded-3xl p-2 mx-1 my-3 flex flex-col;
   }
 
   .navLink li {
@@ -78,6 +82,6 @@ body {
     @apply pr-12 sm:pr-24;
   }
   .info-text {
-    @apply text-slate-gray text-lg leading-7;
+    @apply text-slate-gray text-[16px] leading-6;
   }
 }

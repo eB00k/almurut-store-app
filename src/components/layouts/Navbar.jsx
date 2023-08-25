@@ -7,9 +7,6 @@ import { useRef } from "react";
 export default function Navbar() {
   const menuRef = useRef(null);
 
-  // const toggleMenu = () => {
-  //   menuRef.current.classList.toggle("menu");
-  // };
   const toggleMenu = (open) => {
     if (open) {
       menuRef.current.classList.remove("hidden");

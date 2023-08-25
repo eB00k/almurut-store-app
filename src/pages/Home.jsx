@@ -1,4 +1,4 @@
-import macbook from "../../assets/macbook.png";
+import macbookCompressed from "../assets/macbook_compressed.png";
 
 export default function Home() {
   return (
@@ -14,7 +14,11 @@ export default function Home() {
         </p>
       </div>
       <div className="flex items-center justify-center flex-1 object-cover">
-        <img src={macbook} alt="macbook" className="w-full max-w-full" />
+        <img
+          src={macbookCompressed}
+          alt="macbook"
+          className="w-full max-w-full"
+        />
       </div>
     </section>
   );
