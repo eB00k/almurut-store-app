@@ -3,6 +3,7 @@ import icon from "../assets/pear.png";
 import menuIcon from "../assets/menu-icon.svg";
 import closeMenuIcon from "../assets/close-menu-icon.svg";
 import { useRef } from "react";
+import { navLinks } from "../constants";
 
 export default function Navbar() {
   const menuRef = useRef(null);
@@ -45,10 +46,11 @@ export default function Navbar() {
             onClick={() => toggleMenu(false)}
           />
           <ul className="flex flex-col gap-8 w-[220px] mt-10 mNavLink">
-            <li>Products</li>
-            <li>Services</li>
-            <li>Services</li>
-            <li>Contacts</li>
+            {navLinks.map((navLink) => (
+              <li key={navLink.label} href={navLink.href}>
+                <a href={navLink.href}>{navLink.label}</a>
+              </li>
+            ))}
           </ul>
           <a
             href="#"
@@ -58,10 +60,11 @@ export default function Navbar() {
           </a>
         </div>
         <ul className="flex items-center justify-between flex-[1.5] gap-6 text-[16px] font-normal text-[#999] navLink max-md:hidden">
-          <li>Products</li>
-          <li>Services</li>
-          <li>Services</li>
-          <li>Contacts</li>
+          {navLinks.map((navLink) => (
+            <li key={navLink.label} href={navLink.href}>
+              <a href={navLink.href}>{navLink.label}</a>
+            </li>
+          ))}
         </ul>
         <div className="flex justify-end flex-1 max-md:hidden">
           <a href="#" className="btn hover:bg-transparent hover:text-primary">
