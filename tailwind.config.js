@@ -21,6 +21,7 @@ export default {
         primary: "#212121",
         secondary: "#FF6107",
         whitee: "#F5F5F5",
+        grayy: "#E5E7EB",
         "slate-gray": "#666",
         "white-400": "rgba(255, 255, 255, 0.80)",
       },

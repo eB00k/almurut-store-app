@@ -37,7 +37,7 @@ body {
   }
 
   .card {
-    @apply max-w-[360px] min-w-[280px] bg-white shadow-lg rounded-3xl p-2 mx-1 my-3 flex flex-col;
+    @apply max-w-sm min-w-[320px] bg-white shadow-lg rounded-3xl p-2 mx-1 my-3 flex flex-col;
   }
 
   .navLink li {

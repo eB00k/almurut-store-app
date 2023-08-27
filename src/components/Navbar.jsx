@@ -4,6 +4,7 @@ import menuIcon from "../assets/menu-icon.svg";
 import closeMenuIcon from "../assets/close-menu-icon.svg";
 import { useRef } from "react";
 import { navLinks } from "../constants";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   const menuRef = useRef(null);
@@ -47,8 +48,8 @@ export default function Navbar() {
           />
           <ul className="flex flex-col gap-8 w-[220px] mt-10 mNavLink">
             {navLinks.map((navLink) => (
-              <li key={navLink.label} href={navLink.href}>
-                <a href={navLink.href}>{navLink.label}</a>
+              <li key={navLink.label}>
+                <NavLink to={navLink.to}>{navLink.label}</NavLink>
               </li>
             ))}
           </ul>
@@ -61,8 +62,8 @@ export default function Navbar() {
         </div>
         <ul className="flex items-center justify-between flex-[1.5] gap-6 text-[16px] font-normal text-[#999] navLink max-md:hidden">
           {navLinks.map((navLink) => (
-            <li key={navLink.label} href={navLink.href}>
-              <a href={navLink.href}>{navLink.label}</a>
+            <li key={navLink.label}>
+              <NavLink to={navLink.to}>{navLink.label}</NavLink>
             </li>
           ))}
         </ul>
