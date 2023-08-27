@@ -11,7 +11,7 @@ const ProductItem = ({ product }) => {
   };
 
   return (
-    <div className="max-w-[300px] min-w-[280px] bg-white shadow-md rounded-lg mx-1 my-3 flex flex-col min-h-[200px] overflow-hidden ring ring-grayy gap-4 relative justify-between max-sm:min-w-[300px]">
+    <div className="max-w-[300px] min-w-[280px] bg-white shadow-xl rounded-lg mx-1 my-3 flex flex-col min-h-[200px] overflow-hidden gap-4 relative justify-between max-sm:min-w-[300px]">
       <img
         src={product.img}
         alt={product.model}

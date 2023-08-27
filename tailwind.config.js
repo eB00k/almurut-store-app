@@ -22,7 +22,7 @@ export default {
         secondary: "#FF6107",
         whitee: "#F5F5F5",
         grayy: "#E5E7EB",
-        "slate-gray": "#666",
+        "slate-gray": "#999",
         "white-400": "rgba(255, 255, 255, 0.80)",
       },
       dropShadow: {

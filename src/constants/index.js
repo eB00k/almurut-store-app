@@ -22,7 +22,7 @@ import p14 from "../assets/p_14.jpg";
 
 export const navLinks = [
   { href: "#home", label: "Home", to: "/" },
-  { href: "#about", label: "About Us", to: "/" },
+  { href: "#about", label: "About Us", to: "/#about" },
   { href: "#products", label: "Products", to: "/products" },
   { href: "#contact-us", label: "Contact Us", to: "/" },
 ];
