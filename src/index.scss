@@ -22,7 +22,7 @@ body {
   }
 
   .btn {
-    @apply px-4 border py-[.15rem] rounded-[.25rem] border-primary bg-primary text-whitee w-max transition text-center;
+    @apply px-4 border py-[.15rem] rounded-[.25rem] border-primary bg-primary text-whitee w-max transition text-center flex justify-center items-center;
   }
 
   .mNavLink {
@@ -36,7 +36,7 @@ body {
     }
   }
 
-  .card-box {
+  .card {
     @apply max-w-sm min-w-[320px] bg-white shadow-lg rounded-3xl p-2 mx-1 my-3 flex flex-col;
   }
 
@@ -44,6 +44,18 @@ body {
     position: relative;
     list-style: none;
     cursor: pointer;
+
+    a.active {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background-color: #212121;
+      }
+    }
 
     &::after {
       content: "";

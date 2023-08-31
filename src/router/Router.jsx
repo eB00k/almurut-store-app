@@ -11,7 +11,7 @@ export default function Router() {
         <Route path="/" element={<NavLayout />}>
           <Route index element={<HomeLayout />} />
           <Route path="products" element={<Products />} />
-          <Route path="products:id" element={<ProductDetail />} />
+          <Route path="products/:id" element={<ProductDetail />} />
         </Route>
       </Routes>
     </BrowserRouter>

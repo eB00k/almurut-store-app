@@ -1,17 +1,12 @@
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import { formatCurrency } from "../../utils";
 
 const ProductItem = ({ product }) => {
-  const formatCurrency = (price) => {
-    return new Intl.NumberFormat("en-US", {
-      style: "currency",
-      currency: "USD",
-      currencyDisplay: "narrowSymbol",
-    }).format(price);
-  };
+  console.log(product);
 
   return (
-    <div className="max-w-[300px] min-w-[280px] bg-white shadow-xl rounded-lg mx-1 my-3 flex flex-col min-h-[200px] overflow-hidden gap-4 relative justify-between max-sm:min-w-[300px]">
+    <div className="max-w-[300px] min-w-[280px] bg-white shadow-lg rounded-lg mx-1 my-3 flex flex-col min-h-[200px] overflow-hidden gap-4 relative justify-between max-sm:min-w-[300px] hover:scale-105 transition cursor-pointer">
       <img
         src={product.img}
         alt={product.model}
@@ -19,7 +14,7 @@ const ProductItem = ({ product }) => {
       />
 
       <div className="absolute cursor-pointer top-2 right-2">
-        <FavoriteBorderIcon />
+        {product.liked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
       </div>
 
       <div className="bg-slate-200">

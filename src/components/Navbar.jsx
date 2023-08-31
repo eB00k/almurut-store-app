@@ -4,7 +4,7 @@ import menuIcon from "../assets/menu-icon.svg";
 import closeMenuIcon from "../assets/close-menu-icon.svg";
 import { useRef } from "react";
 import { navLinks } from "../constants";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 export default function Navbar() {
   const menuRef = useRef(null);
@@ -60,10 +60,10 @@ export default function Navbar() {
             Sign In
           </a>
         </div>
-        <ul className="flex items-center justify-between flex-[1.5] gap-6 text-[16px] font-normal text-[#999] navLink max-md:hidden">
+        <ul className="flex items-center justify-evenly flex-[2] gap-6 text-[16px] font-normal text-[#999] navLink max-md:hidden">
           {navLinks.map((navLink) => (
             <li key={navLink.label}>
-              <NavLink to={navLink.to}>{navLink.label}</NavLink>
+              <Link to={navLink.to}>{navLink.label}</Link>
             </li>
           ))}
         </ul>
