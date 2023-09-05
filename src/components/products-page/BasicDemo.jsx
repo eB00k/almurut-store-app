@@ -1,21 +1,27 @@
 import React, { useState } from "react";
-import { MultiSelect } from 'primereact/multiselect';
+import { MultiSelect } from "primereact/multiselect";
 
-export default function FilterDemo() {
-    const [selectedCities, setSelectedCities] = useState(null);
-    const cities = [
-        { name: 'New York', code: 'NY' },
-        { name: 'Rome', code: 'RM' },
-        { name: 'London', code: 'LDN' },
-        { name: 'Istanbul', code: 'IST' },
-        { name: 'Paris', code: 'PRS' }
-    ];
+export default function BasicDemo() {
+  const [selectedCities, setSelectedCities] = useState(null);
+  const cities = [
+    { name: "New York", code: "NY" },
+    { name: "Rome", code: "RM" },
+    { name: "London", code: "LDN" },
+    { name: "Istanbul", code: "IST" },
+    { name: "Paris", code: "PRS" },
+  ];
 
-    return (
-        <div className="flex card justify-content-center">
-            <MultiSelect value={selectedCities} onChange={(e) => setSelectedCities(e.value)} options={cities} optionLabel="name" 
-                filter placeholder="Select Cities" maxSelectedLabels={3} className="w-full md:w-20rem" />
-        </div>
-    );
+  return (
+    <div className="flex card justify-content-center">
+      <MultiSelect
+        value={selectedCities}
+        onChange={(e) => setSelectedCities(e.value)}
+        options={cities}
+        optionLabel="name"
+        placeholder="Select Cities"
+        maxSelectedLabels={3}
+        className=""
+      />
+    </div>
+  );
 }
-       

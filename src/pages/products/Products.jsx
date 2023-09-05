@@ -24,8 +24,8 @@ const Products = () => {
       <ProductsFilter getSearchValue={getSearchValue} />
       <div className="grid w-full grid-cols-3 gap-8 p-4 max-lg:grid-cols-2 max-md:grid-cols-1 max-md:gap-0 justify-items-center">
         {displayedData.map((item) => (
-          <Link to={`/products/${item.id}`}>
-            <ProductItem key={item.id} product={item} />
+          <Link to={`/products/${item.id}`} key={item.id}>
+            <ProductItem product={item} />
           </Link>
         ))}
       </div>

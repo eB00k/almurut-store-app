@@ -3,8 +3,6 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import { formatCurrency } from "../../utils";
 
 const ProductItem = ({ product }) => {
-  console.log(product);
-
   return (
     <div className="max-w-[300px] min-w-[280px] bg-white shadow-lg rounded-lg mx-1 my-3 flex flex-col min-h-[200px] overflow-hidden gap-4 relative justify-between max-sm:min-w-[300px] hover:scale-105 transition cursor-pointer">
       <img

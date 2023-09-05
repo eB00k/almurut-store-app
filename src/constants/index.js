@@ -27,6 +27,16 @@ export const navLinks = [
   { href: "#contact-us", label: "Contact", to: "/" },
 ];
 
+export const defaultFilters = [
+  { type: "phone" },
+  { type: "smartphones" },
+  { type: "laptop" },
+  { type: "headphone" },
+  { type: "smartwatch" },
+  { type: "desktop" },
+  { type: "camera" },
+];
+
 export const cards = [
   {
     name: "Laptops",
