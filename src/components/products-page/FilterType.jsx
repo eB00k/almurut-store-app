@@ -5,12 +5,12 @@ import { defaultFilters } from "../../constants";
 const FILTER_OPTIONS = {};
 
 defaultFilters.map((filter) => {
-  FILTER_OPTIONS[filter.type] = false;
+  FILTER_OPTIONS[filter.type] = true;
 });
 
 FILTER_OPTIONS.all = true;
 
-const FilterType = () => {
+const FilterType = ({ getFilterOptions }) => {
   const [openFilterMenu, setOpenFilterMenu] = useState(false);
   const [options, setOptions] = useState(FILTER_OPTIONS);
   const filterMenuRef = useRef(null);
@@ -20,6 +20,10 @@ const FilterType = () => {
       setOpenFilterMenu(false);
     }
   };
+
+  useEffect(() => {
+    getFilterOptions(options);
+  }, [options]);
 
   useEffect(() => {
     // Attach event listener when component mounts
@@ -44,15 +48,28 @@ const FilterType = () => {
       setOptions(updateOptions);
     } else {
       setOptions((prevOptions) => {
-        if(prevOptions[opt]) return {
-          ...prevOptions,
-          [opt]: !prevOptions[opt],
-          all: false
+        if (prevOptions[opt])
+          return {
+            ...prevOptions,
+            [opt]: !prevOptions[opt],
+            all: false,
+          };
+        else {
+          const updateOptions = { ...options };
+          updateOptions[opt] = !options[opt];
+          for (const key in updateOptions) {
+            if (key === "all") break;
+            if (!updateOptions[key]) {
+              console.log("yeah", updateOptions);
+              return updateOptions;
+            }
+          }
+          console.log("brr");
+          return {
+            ...updateOptions,
+            all: true,
+          };
         }
-        return {
-          ...prevOptions,
-          [opt]: !prevOptions[opt],
-        };
       });
     }
   };

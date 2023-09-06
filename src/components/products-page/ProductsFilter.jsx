@@ -1,8 +1,8 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import FilterType from "./FilterType";
 
-const ProductsFilter = ({ getSearchValue }) => {
+const ProductsFilter = ({ getSearchValue, getFilterOptions }) => {
   const [search, setSearch] = useState("");
 
   const handleSearch = (e) => {
@@ -12,7 +12,7 @@ const ProductsFilter = ({ getSearchValue }) => {
 
   return (
     <div className="flex justify-between w-full p-4 bg-white rounded-md shadow-md">
-      <FilterType />
+      <FilterType getFilterOptions={getFilterOptions}/>
       <div className="flex items-center justify-center px-2 overflow-hidden bg-white border-2 rounded-lg border-grayy">
         <span onClick={handleSearch}>
           <SearchIcon className="transition-all text-grayy active:scale-125 " />

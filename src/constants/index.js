@@ -28,8 +28,7 @@ export const navLinks = [
 ];
 
 export const defaultFilters = [
-  { type: "phone" },
-  { type: "smartphones" },
+  { type: "smartphone" },
   { type: "laptop" },
   { type: "headphone" },
   { type: "smartwatch" },
