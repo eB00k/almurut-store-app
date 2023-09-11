@@ -12,7 +12,7 @@ const ProductsFilter = ({ getSearchValue, getFilterOptions }) => {
 
   return (
     <div className="flex justify-between w-full p-4 bg-white rounded-md shadow-md">
-      <FilterType getFilterOptions={getFilterOptions}/>
+      <FilterType getFilterOptions={getFilterOptions} />
       <div className="flex items-center justify-center px-2 overflow-hidden bg-white border-2 rounded-lg border-grayy">
         <span onClick={handleSearch}>
           <SearchIcon className="transition-all text-grayy active:scale-125 " />

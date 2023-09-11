@@ -4,7 +4,7 @@ import { defaultFilters } from "../../constants";
 
 const FILTER_OPTIONS = {};
 
-defaultFilters.map((filter) => {
+defaultFilters.forEach((filter) => {
   FILTER_OPTIONS[filter.type] = true;
 });
 
