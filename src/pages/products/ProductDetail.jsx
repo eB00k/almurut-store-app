@@ -13,13 +13,12 @@ const ProductDetail = () => {
         {"<"} <span className="underline">Back to all Products</span>
       </Link>
       {product[0] ? (
-        // <ProductItem product={product[0]} />
         <ProductDetailBox data={product[0]} />
       ) : (
         <div>
           <span className="text-red-600">
             There is no products with such ID :
-          </span>{" "}
+          </span>
           {id}
         </div>
       )}

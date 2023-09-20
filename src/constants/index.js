@@ -21,10 +21,8 @@ import p13 from "../assets/p_13.jpg";
 import p14 from "../assets/p_14.jpg";
 
 export const navLinks = [
-  { href: "#home", label: "Home", to: "/" },
-  { href: "#about", label: "About", to: "/#about" },
-  { href: "#products", label: "Products", to: "/products" },
-  { href: "#contact-us", label: "Contact", to: "/" },
+  { label: "Home", path: "/" },
+  { label: "Products", path: "/products" },
 ];
 
 export const defaultFilters = [

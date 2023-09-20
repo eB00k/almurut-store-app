@@ -22,6 +22,7 @@ export default function Navbar() {
   return (
     <header className="absolute z-10 w-full py-6 font-poppins padding-x">
       <nav className="flex items-center justify-between gap-10 max-container">
+        {/* navbar logo */}
         <div className="relative flex items-center flex-1">
           <img
             src={icon}
@@ -34,6 +35,7 @@ export default function Navbar() {
             almurut
           </span>
         </div>
+        {/* hamburger menu icon (will be shown in small devices) */}
         <div
           ref={menuRef}
           className="absolute top-0 right-0 z-20 flex-col items-center hidden h-screen gap-8 py-8 text-center rounded-md shadow-xl bg-primary w-max padding-x text-whitee "
@@ -49,7 +51,7 @@ export default function Navbar() {
           <ul className="flex flex-col gap-8 w-[220px] mt-10 mNavLink">
             {navLinks.map((navLink) => (
               <li key={navLink.label}>
-                <NavLink to={navLink.to}>{navLink.label}</NavLink>
+                <Link to={navLink.path}>{navLink.label}</Link>
               </li>
             ))}
           </ul>
@@ -60,13 +62,17 @@ export default function Navbar() {
             Sign In
           </a>
         </div>
+
+        {/* navbar links */}
         <ul className="flex items-center justify-evenly flex-[2] gap-6 text-[16px] font-normal text-[#999] navLink max-md:hidden">
           {navLinks.map((navLink) => (
             <li key={navLink.label}>
-              <Link to={navLink.to}>{navLink.label}</Link>
+              <Link to={navLink.path}>{navLink.label}</Link>
             </li>
           ))}
         </ul>
+
+         {/* sign in/up button */}
         <div className="flex justify-end flex-1 max-md:hidden">
           <a href="#" className="btn hover:bg-transparent hover:text-primary">
             Sign In

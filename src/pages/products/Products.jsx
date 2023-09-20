@@ -4,6 +4,7 @@ import { techProducts } from "../../constants";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { defaultFilters } from "../../constants";
+import { FALSE } from "sass";
 
 const FILTER_OPTIONS = {};
 
@@ -18,23 +19,28 @@ const Products = () => {
     displayedData: techProducts,
     search: "",
     opts: FILTER_OPTIONS,
+    favorite: false,
   });
 
   useEffect(() => {
     handleSearchAndFilter();
-  }, [state.search, state.opts]);
+  }, [state.search, state.opts, state.favorite]);
 
   function handleSearchAndFilter() {
-    const { search, opts } = state;
+    const { search, opts, favorite } = state;
     const filteredData = techProducts.filter((item) => {
       // Filter by search input
       const searchMatch = item.model
         .toLowerCase()
         .includes(search.toLowerCase());
+
       // Filter by type option
       const typeMatch = opts.all || opts[item.type.toLowerCase()];
 
-      return searchMatch && typeMatch;
+      // Filter by favorite option
+      const favoriteMatch = favorite ? item.liked : true;
+
+      return searchMatch && typeMatch && favoriteMatch;
     });
 
     setState({ ...state, displayedData: filteredData });
@@ -48,6 +54,10 @@ const Products = () => {
     setState({ ...state, opts: options });
   };
 
+  const getFavoritesValue = (favorite) => {
+    setState({ ...state, favorite: favorite });
+  };
+
   const { displayedData } = state;
 
   return (
@@ -55,6 +65,7 @@ const Products = () => {
       <ProductsFilter
         getSearchValue={getSearchValue}
         getFilterOptions={getFilterOptions}
+        getFavoritesValue={getFavoritesValue}
       />
       {displayedData.length ? (
         <div className="grid w-full grid-cols-3 gap-8 p-4 max-lg:grid-cols-2 max-md:grid-cols-1 max-md:gap-0 justify-items-center">
