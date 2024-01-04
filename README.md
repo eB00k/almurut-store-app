@@ -2,6 +2,8 @@
 
 Welcome to Almurut Store, your premier destination for cutting-edge tech products. Our web platform, powered by React and Vite, offers a seamless and immersive shopping experience for tech enthusiasts. Explore a diverse range of products, from the latest gadgets to high-performance electronics.
 
+### Watch DEMO https://dias-almurut-store.netlify.app
+
 ## Features
 
 - **User-Friendly Interface:** Our website is designed with a clean and intuitive interface, ensuring a smooth and enjoyable browsing experience.
